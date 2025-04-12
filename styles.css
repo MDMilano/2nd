@@ -23,7 +23,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background: linear-gradient(to bottom, var(--white), var(--rose-50));
   color: var(--gray-800);
   min-height: 100vh;
@@ -61,7 +61,7 @@ body {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
   letter-spacing: -0.025em;
   color: var(--gray-800);
@@ -83,7 +83,7 @@ h1 {
   width: 100%;
   max-width: 28rem;
   margin: 0 auto;
-  aspect-ratio: 9/12;
+  aspect-ratio: 9 / 12;
   border-radius: var(--radius);
   overflow: hidden;
   border: 2px solid var(--rose-100);
@@ -119,16 +119,16 @@ h1 {
 
 @keyframes pulse {
   0% {
-      transform: scale(0.95);
-      opacity: 0.7;
+    transform: scale(0.95);
+    opacity: 0.7;
   }
   50% {
-      transform: scale(1.05);
-      opacity: 1;
+    transform: scale(1.05);
+    opacity: 1;
   }
   100% {
-      transform: scale(0.95);
-      opacity: 0.7;
+    transform: scale(0.95);
+    opacity: 0.7;
   }
 }
 
@@ -195,11 +195,12 @@ h1 {
 }
 
 @keyframes highlight {
-  0%, 100% {
-      color: var(--rose-600);
+  0%,
+  100% {
+    color: var(--rose-600);
   }
   50% {
-      color: var(--rose-500);
+    color: var(--rose-500);
   }
 }
 
@@ -228,11 +229,12 @@ h1 {
 }
 
 @keyframes blink {
-  0%, 100% {
-      opacity: 1;
+  0%,
+  100% {
+    opacity: 1;
   }
   50% {
-      opacity: 0.3;
+    opacity: 0.3;
   }
 }
 
@@ -273,65 +275,166 @@ h1 {
   color: var(--rose-700);
 }
 
+/* Message Form Styles */
+.message-form-section {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--rose-100);
+  max-width: 28rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--gray-800);
+  margin-bottom: 1rem;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--rose-200);
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--rose-400);
+}
+
+.btn-send {
+  margin-top: 0.5rem;
+  background-color: var(--rose-500);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-send:hover {
+  background-color: var(--rose-600);
+}
+
+.send-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m22 2-7 20-4-9-9-4Z'/%3E%3Cpath d='M22 2 11 13'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-status {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  display: none;
+}
+
+.form-status.success {
+  display: block;
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.form-status.error {
+  display: block;
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
 /* Responsive styles */
 @media (max-width: 360px) {
   .countdown-card {
-      width: 3rem;
-      padding: 0.4rem;
+    width: 3rem;
+    padding: 0.4rem;
   }
-  
+
   .countdown-value {
-      font-size: 1rem;
+    font-size: 1rem;
   }
-  
+
   .countdown-label {
-      font-size: 0.6rem;
+    font-size: 0.6rem;
+  }
+
+  .message-form-section {
+    padding: 1rem;
   }
 }
 
 @media (min-width: 480px) {
   .countdown-card {
-      width: 4rem;
+    width: 4rem;
   }
 }
 
 @media (min-width: 768px) {
   h1 {
-      font-size: 3rem;
+    font-size: 3rem;
   }
-  
+
   .subtitle {
-      font-size: 1rem;
+    font-size: 1rem;
   }
-  
+
   .countdown-card {
-      width: 5rem;
-      padding: 0.75rem;
+    width: 5rem;
+    padding: 0.75rem;
   }
-  
+
   .countdown-value {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
-  
+
   .countdown-label {
-      font-size: 0.75rem;
+    font-size: 0.75rem;
   }
-  
+
   .message {
-      font-size: 1rem;
+    font-size: 1rem;
   }
-  
+
   #live-indicator {
-      font-size: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .countdown-card {
-      width: 5.5rem;
+    width: 5.5rem;
   }
-  
+
   .countdown-value {
-      font-size: 1.75rem;
+    font-size: 1.75rem;
   }
 }
