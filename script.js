@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const secondsEl = document.getElementById("seconds")
   
     // Target date - April 13, 2025
-    const monthsaryDate = new Date("2025-04-13T01:00:00").getTime()
+    const monthsaryDate = new Date("2025-04-13T01:30:00").getTime()
   
     // Countdown timer functionality
     function updateCountdown() {
