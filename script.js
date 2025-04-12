@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = document.getElementById("message-content").value;
     const formStatus = document.getElementById("form-status");
 
-    // Replace with your email address
+    // Receiver email address
     const yourEmail = "marcdanielmilano@gmail.com";
 
     // Validate input fields
